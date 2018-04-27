@@ -49,11 +49,13 @@ with open(os.path.join(PROJECT_ROOT, 'README.rst')) as readme_file:
 
 
 #################################################
-# Set up packages.
+# Set up files.
 
-PACKAGES = [NAME]
+PACKAGES = []
 
 PACKAGE_DATA = {}
+
+MODULES = ['interpreters.py']
 
 
 #################################################
@@ -85,6 +87,7 @@ kwargs = {'name': NAME,
 
           'packages': PACKAGES,
           'package_data': PACKAGE_DATA,
+          'py_modules': MODULES,
           }
 
 for key in list(kwargs):
