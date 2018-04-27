@@ -1,4 +1,4 @@
-from distutils.core import setup
+from distutils.core import setup, Extension
 import os.path
 
 import interpreters
@@ -57,6 +57,15 @@ PACKAGE_DATA = {}
 
 MODULES = ['interpreters.py']
 
+EXTENSIONS = [
+        Extension('_interpreters',
+                  ['src/_interpretersmodule.c'],
+                  include_dirs=['include'],
+                  #define_macros=[('NDEBUG', '1')],
+                  #undef_macros=['HAVE_FOO'],
+                  ),
+        ],
+
 
 #################################################
 # Set up the rest of the package info.
@@ -88,6 +97,7 @@ kwargs = {'name': NAME,
           'packages': PACKAGES,
           'package_data': PACKAGE_DATA,
           'py_modules': MODULES,
+          'ext_modules': EXTENSIONS,
           }
 
 for key in list(kwargs):
