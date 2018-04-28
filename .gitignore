@@ -9,4 +9,7 @@ syntax: glob
 *.rej
 *~
 
+src
+include
+
 MANIFEST

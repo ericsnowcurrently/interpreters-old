@@ -1,0 +1,5 @@
+[info]
+repo = https://github.com/python/cpython
+branch = master
+revision = 74f56878cdee18d485e4f8b485d55ce62e38f4c9
+timestamp = 2002-12-25 00:00:00

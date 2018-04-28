@@ -106,4 +106,7 @@ for key in list(kwargs):
 
 
 if __name__ == '__main__':
+    if {'src', 'include'} - set(os.listdir(PROJECT_ROOT)):
+        raise Exception('missing extension module files; '
+                        'please run python3 -m update')
     setup(**kwargs)
