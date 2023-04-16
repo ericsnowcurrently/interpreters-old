@@ -7,9 +7,7 @@ Python-level access to CPython's C-level subinterpreters API.
 Library API
 -----------
 
-The package is called ``interpreters``.  Here is the basic API:
-
-<TBD>
+The package is called ``interpreters``.  See PEP 554 for more info.
 
 
 Building and Installing
